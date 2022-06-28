@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homepageFragment">
+    <fragment
+        android:id="@+id/homepageFragment"
+        android:name="com.example.aptivatask.ui.homepage.HomepageFragment"
+        android:label="HomepageFragment" >
+        <action
+            android:id="@+id/action_homepageFragment_to_listingItemDetailsPage"
+            app:destination="@id/listingItemDetailsPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/listingItemDetailsPage"
+        android:name="com.example.aptivatask.ui.detailsPage.ListingItemDetailsPage"
+        android:label="fragment_listing_item_details_page"
+        tools:layout="@layout/fragment_listing_item_details_page" >
+        <argument
+            android:name="item"
+            app:argType="com.example.aptivatask.models.ListingItem" />
+    </fragment>
+</navigation>
